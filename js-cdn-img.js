@@ -1,8 +1,8 @@
 // 定义多个HTML代码块及它们的权重
 const htmlSnippets = [
-    { html: '<a target="_blank" href="https://www.ydbee.cn/" title="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）" ><img src="https://img.cdn.mifengyun.top/ydbee_logo.png" width="150" height="80" alt="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）"></a>', weight: 3 },
-    { html: '<a target="_blank" href="https://www.fusionidc.cn/" title="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）" ><img src="https://www.fusionidc.cn/upload/20240710/8347ee8c6a6b4b3781ef0cc55cbce68c.png" width="150" height="80" alt="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）"></a>', weight: 1 },
-    { html: '<a target="_blank" href="https://idc.7msb.com/" title="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）" ><img src="https://idc.7msb.com/logo.png" width="150" height="80" alt="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）"></a>', weight: 1 }
+    { html: '<a target="_blank" href="https://www.ydbee.cn/" title="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）" ><img src="https://img.cdn.mifengyun.top/ydbee_logo.png" width="150" height="80" alt="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）"></a> <!-- 快速CDN -->', weight: 3 },
+    { html: '<a target="_blank" href="https://www.fusionidc.cn/" title="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）" ><img src="https://www.fusionidc.cn/upload/20240710/8347ee8c6a6b4b3781ef0cc55cbce68c.png" width="150" height="80" alt="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）"></a> <!-- 快速CDN -->', weight: 1 },
+    { html: '<a target="_blank" href="https://idc.7msb.com/" title="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）" ><img src="https://idc.7msb.com/logo.png" width="150" height="80" alt="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）"></a> <!-- 快速CDN -->', weight: 1 }
 ];
 
 // 计算总权重
