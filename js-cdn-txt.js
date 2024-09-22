@@ -1,8 +1,8 @@
 // 定义多个HTML代码块及它们的权重
 const htmlSnippets = [
-    { html: '<a target="_blank" href="https://www.ydbee.cn/" title="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）" alt="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）">本站由云端蜜蜂提供网站加速和攻击防御服务</a> <!-- 快速CDN -->', weight: 3 },
-    { html: '<a target="_blank" href="https://www.fusionidc.cn/" title="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）" alt="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）">本站由聚变云数据提供网站加速和攻击防御服务</a> <!-- 快速CDN -->', weight: 1 },
-    { html: '<a target="_blank" href="https://idc.7msb.com/" title="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）" alt="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）">本站由花卷IDC提供网站加速和攻击防御服务</a> <!-- 快速CDN -->', weight: 1 }
+    { html: '<a target="_blank" href="https://www.ydbee.cn/" title="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）" alt="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）">本站由云端蜜蜂提供网站加速和攻击防御服务</a>', weight: 3 },
+    { html: '<a target="_blank" href="https://www.fusionidc.cn/" title="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）" alt="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）">本站由聚变云数据提供网站加速和攻击防御服务</a>', weight: 1 },
+    { html: '<a target="_blank" href="https://idc.7msb.com/" title="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）" alt="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）">本站由花卷IDC提供网站加速和攻击防御服务</a>', weight: 1 }
 ];
 
 // 计算总权重
