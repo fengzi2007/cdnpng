@@ -1,35 +1,60 @@
-// 链接数组
-const links = [
-    '<a target="_blank" href="https://www.ydbee.cn/" title="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）" alt="云端蜜蜂，为您免费提供网站加速和网站防御（DDOS、CC攻击）">本站由云端蜜蜂提供网站加速和攻击防御服务</a>',
-    '<a target="_blank" href="https://www.fusionidc.cn/" title="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）" alt="聚变云，为您免费提供网站加速和网站防御（DDOS、CC攻击）">本站由聚变云数据提供网站加速和攻击防御服务</a>',
-    '<a target="_blank" href="https://idc.7msb.com/" title="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）" alt="花卷IDC，为您免费提供网站加速和网站防御（DDOS、CC攻击）">本站由花卷IDC提供网站加速和攻击防御服务</a>',
-    // 假设这里有一个包含 "快速CDN" 的链接
-    // '<a target="_blank" href="http://example.com" title="快速CDN">快速CDN服务</a>'
-];
-
 // 获取HTML中的目标元素
 const container = document.getElementById('partnerLink');
+const allLinksContainer = document.getElementById('allLinks');
 
-// 过滤掉包含 "快速CDN" 的链接
-const filteredLinks = links.filter(link => {
-    const regex = new RegExp(/快速CDN/);
-    return !regex.test(link);
-});
+// 获取所有链接
+const allLinks = Array.from(allLinksContainer.getElementsByTagName('a'));
 
-// 生成一个随机索引
-function getRandomIndex() {
-    return Math.floor(Math.random() * filteredLinks.length);
+// 检查链接文本是否包含关键词 "快速CDN"
+function shouldHideLink(linkText) {
+    const keyword = '快速CDN';
+    return linkText.includes(keyword);
 }
 
-// 将随机选择的链接插入到页面中
-function insertRandomLink() {
-    if (filteredLinks.length > 0) {
-        const index = getRandomIndex();
-        container.innerHTML = filteredLinks[index];
-    } else {
-        container.innerHTML = '没有合适的链接可显示。';
+// 根据权重选择一个链接
+function selectLinkByWeight(links) {
+    let totalWeight = 0;
+    for (let link of links) {
+        totalWeight += parseInt(link.getAttribute('data-weight'), 10);
     }
+
+    // 生成一个介于0和总权重之间的随机数
+    const random = Math.random() * totalWeight;
+
+    // 计算累积权重并选择链接
+    let cumulativeWeight = 0;
+    for (let link of links) {
+        cumulativeWeight += parseInt(link.getAttribute('data-weight'), 10);
+        if (random <= cumulativeWeight) {
+            return link;
+        }
+    }
+
+    // 如果没有匹配项（理论上不应该发生），返回第一个链接
+    return links[0];
 }
 
-// 调用函数插入链接
+// 动态插入随机链接，并隐藏包含 "快速CDN" 的链接
+function insertRandomLink() {
+    // 根据权重选择一个链接
+    const selectedLink = selectLinkByWeight(allLinks);
+
+    // 创建一个新的元素并设置其内容
+    const linkElement = document.createElement('a');
+    linkElement.href = selectedLink.href;
+    linkElement.title = selectedLink.title;
+    linkElement.alt = selectedLink.alt;
+    linkElement.innerHTML = selectedLink.innerHTML;
+
+    // 检查链接文本是否包含 "快速CDN" 并决定是否隐藏
+    if (shouldHideLink(linkElement.innerHTML)) {
+        linkElement.style.display = 'none';
+    }
+
+    // 清空容器并插入新链接
+    container.innerHTML = ''; // 清空容器
+    container.appendChild(linkElement); // 插入新链接
+}
+
+// 初始化：插入随机链接
 insertRandomLink();
