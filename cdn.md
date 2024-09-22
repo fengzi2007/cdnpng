@@ -40,5 +40,8 @@ Some basic Git commands are:
 ```
 文字+图片或者文字赞助代码，可二选一 
 图片外链地址：
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://img.cdn.mifengyun.top/ydbee_logo.png)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://www.fusionidc.cn/upload/20240710/8347ee8c6a6b4b3781ef0cc55cbce68c.png)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://idc.7msb.com/logo.png)
 
 示例效果截图：
