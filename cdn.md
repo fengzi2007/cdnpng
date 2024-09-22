@@ -45,3 +45,5 @@ Some basic Git commands are:
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://idc.7msb.com/logo.png)
 
 示例效果截图：
+
+感谢大家对我们的支持，我们的努力离不开你们的肯定与支持（免费用也希望大家支持一下我们的发展，谢谢！）
